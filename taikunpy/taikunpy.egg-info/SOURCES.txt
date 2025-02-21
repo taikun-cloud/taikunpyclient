@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+taikunpy/__init__.py
+taikunpy/client.py
+taikunpy.egg-info/PKG-INFO
+taikunpy.egg-info/SOURCES.txt
+taikunpy.egg-info/dependency_links.txt
+taikunpy.egg-info/requires.txt
+taikunpy.egg-info/top_level.txt
