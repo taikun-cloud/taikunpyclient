@@ -1,8 +1,11 @@
 # TaikunPy Client
 Taikun Python Client is a repository containing all the nescassary things to get started developing with Taikun Python client.
 
-> Taikun Py client is still in early alpha stages of development.
-> Both Client and Generated backend can, and probably will change.
+
+
+| <img src="logo.png" alt="Python Client Logo" width="75"/>  | ⚠ Taikun Py Client is still in early alpha stages of development. <br/> Both Client and Generated backend can, and probably will change. |
+|---|------------------------------------------------------------------------------------------------------------------------------------------|
+
 
 ## What is this? 
 The repository is divided into 3 folders
