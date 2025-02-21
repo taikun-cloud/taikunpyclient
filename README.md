@@ -1,4 +1,4 @@
-# TaikunPy Client
+# Taikun Python Client
 Taikun Python Client is a repository containing all the nescassary things to get started developing with Taikun Python client.
 
 
