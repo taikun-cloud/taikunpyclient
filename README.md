@@ -7,9 +7,9 @@ Taikun Python Client is a repository containing all the nescassary things to get
 |---|------------------------------------------------------------------------------------------------------------------------------------------|
 
 
-## What is this? 
+## What is this?
 The repository is divided into 3 folders
-- taikunpy 
+- taikunpy
   - Client wrapper taking care of authentication (bare bones alpha)
 - taikunpycore
   - Python client for CloudWorks API, generated using OpenAPI generator
@@ -33,7 +33,7 @@ Install the **taikunpy** package. (the login wrapper)
 pip install taikunpy/ -r taikunpy/requirements.txt
 ```
 
-The TaikunPy client uses environment variables to authenticate to Taikun CloudWorks. 
+The TaikunPy client uses environment variables to authenticate to Taikun CloudWorks.
 ```bash
 export TAIKUN_EMAIL="john.doe@company.com"
 export TAIKUN_PASSWORD="mYeTQWKQA485FXifOr8vWWg3m2"
@@ -45,7 +45,7 @@ python example-project/main.py
 ```
 
 By default, it will just print out the name of logged-in user.
-If all was successful you should see: 
+If all was successful you should see:
 ```bash
 $ python example-project/main.py 
 User Info: johndoe
@@ -69,18 +69,22 @@ You can **explore the available capabilities** in the following ways:
 ### Additional login environment variables
 The default API host is `api.taikun.cloud`.
 To override it, set the following environment variable. Set it **without** `https://`
-```
+```bash
 export TAIKUN_API_HOST=api.custom.cloud (default value is: api.taikun.cloud)
 ```
 
-To authenticate with Keycloak, set the following environment variables:
-```
-TAIKUN_KEYCLOAK_EMAIL
-TAIKUN_KEYCLOAK_PASSWORD
+The default mode of authentication is **"default"** meaning username+password, however you can change to mode to **"token"** to use user Tokens created in Taikun CloudWorks.
+
+To authenticate with User tokens (access + secret key), set the following environment variables:
+```bash 
+export TAIKUN_AUTH_MODE='token'
+export TAIKUN_ACCESS_KEY='lkasdjflkasjdfvna'
+export TAIKUN_SECRET_KEY='asdlfkjwejrhlkhsaofbsdofiuashdflkabsdfkabsdfklabdlfuasbkdjfbalsdfbaslkfbasdkfjbasdfkbasddlfkjbsadflkjasdbfjkb=='
 ```
 
 ## Missing key features
 - [ ] Showback
+- [ ] Keycloak auth
 - [ ] Round trip to get new authentication token.
 - [ ] Proper error handling
 - [ ] Only some fields should be nullable - now all are
