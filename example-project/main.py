@@ -17,4 +17,3 @@ print("User Info:", user_info.data.username)
 # Print json information about the available kubernetes profiles
 # list_k8sprofiles = taikunpycore.KubernetesProfilesApi(client).kubernetesprofiles_list(limit=1)
 # print(json.dumps(list_k8sprofiles.to_dict(), indent=4))
-
