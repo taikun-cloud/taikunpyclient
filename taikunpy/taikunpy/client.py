@@ -7,11 +7,16 @@ from taikunpycore.rest import ApiException
 
 
 class TaikunClient:
-    def __init__(self, api_host=None, auto_refresh_minutes=None):
+    def __init__(self, api_host=None, auto_refresh_minutes=None):  # Default refresh to 5 minutes
         """Initialize the Taikun API Client and authenticate."""
 
         # Store how often to auto-refresh the token (in minutes)
-        self.auto_refresh_minutes = auto_refresh_minutes
+        if auto_refresh_minutes is None:
+            self.auto_refresh_minutes = 10
+            # print(self.auto_refresh_minutes)
+
+        else:
+            self.auto_refresh_minutes = auto_refresh_minutes
         self._refresh_timer = None
 
         # Determine the API host from argument or environment variable
