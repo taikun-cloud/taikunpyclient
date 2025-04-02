@@ -11,7 +11,12 @@ class TaikunClient:
         """Initialize the Taikun API Client and authenticate."""
 
         # Store how often to auto-refresh the token (in minutes)
-        self.auto_refresh_minutes = auto_refresh_minutes
+        if auto_refresh_minutes is None:
+            self.auto_refresh_minutes = 10 # Default refresh to 10 minutes
+            # print(self.auto_refresh_minutes)
+
+        else:
+            self.auto_refresh_minutes = auto_refresh_minutes
         self._refresh_timer = None
 
         # Determine the API host from argument or environment variable
