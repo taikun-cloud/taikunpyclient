@@ -85,7 +85,7 @@ export TAIKUN_SECRET_KEY='asdlfkjwejrhlkhsaofbsdofiuashdflkabsdfkabsdfklabdlfuas
 ## Missing key features
 - [ ] Showback
 - [ ] Keycloak auth
-- [ ] Round trip to get new authentication token.
+- [x] ~~Round trip to get new authentication token.~~ AUtomatic refresh of the token in background 
 - [ ] Proper error handling
 - [ ] Only some fields should be nullable - now all are
 - [ ] Many more....
